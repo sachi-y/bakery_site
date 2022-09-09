@@ -1,0 +1,8 @@
+.l-header {
+  width: 100%;
+  position: fixed;
+}
+.l-header p {
+  width: 100%;
+  background-color: rgba(224, 224, 224, 0.8784313725);
+}/*# sourceMappingURL=header.css.map */
