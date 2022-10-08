@@ -2,33 +2,352 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<meta name="description" content="ホームページのdescription" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="./assets/images/fav.png" />
-<title>ホームページ</title>
-<link href="css/header.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/footer.css" rel="stylesheet">
+<title>ホームぺ―ジ</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link href="css/reset.css"  rel="stylesheet">
+<link href="css/sp.css" rel="stylesheet">
+<link href="css/pc.css" rel="stylesheet">
+<link href="css/utility.css" rel="stylesheet">
+<link href="css/component.css" rel="stylesheet">
 </head>
 <body>
-<div class="">
-  <div class="l-header u-fix">
-    <p>天然酵母のクロワッサン 三日月屋の通販サイト</p>
-    <div class="u-flex">
-      <a><div class="hum"></div></a>
-      <a><img src=""></a>
-      <a><img src=""></a>
+<div class="l-wrap">
+  <header class="l-header u-fix">
+    <h1 class="l-header__ttl">天然酵母のクロワッサン 月下美人屋の通販サイト</h1>
+    <div class="l-header__box">
+      <div class="p-menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>メニュー</span>
+      </div>
+      <a href=""><img src="assets/logo.jpg" class="l-header__logo" alt="ロゴ"></a>
+      <a href=""><img src="assets/cart.png" class="l-header__cart" alt="カート"></a>
     </div>
-  </div><!--l-header-->
-  <div class="l-main">
-    <!--スライダー-->
-    <div class="">お知らせ</div>
-  </div><!--l-main-->
-
-  <div class="l-footer">
-
-  </div><!--l-footer-->
+    <div class="p-menu">
+      <div class="p-menu__exit">✖</div>
+      <div class="p-menu__wrap">
+        <div class="p-menu__section">
+          <div class="p-menu__heading">
+            <h2>商品検索</h2>
+          </div>
+          <form class="p-menu__form u-flex p-menu__search">
+            <input placeholder="何かお探しですか？">
+            <button type="submit">検索する</button>
+          </form>
+        </div>
+        <div class="p-menu__section">
+          <div class="p-menu__heading">
+            <h2>会員ログイン</h2>
+          </div>
+          <p class="p-menu__hello">こんにちはゲストさん</p>
+          <form class="p-menu__form p-menu__login">
+            <p>メールアドレス</p>
+            <input type="email" placeholder="sample@example.jp">
+            <p>パスワード</p>
+            <input type="password">
+            <input type="submit" class="c-btn u-bgcOrange" value="ログイン">
+            <ul>
+              <li class="c-btn  u-bgcGray"><a href="">会員登録する</a></li>
+              <li class="c-btn"><a href="">ログイン情報を忘れたら</a></li>
+            </ul>
+          </form>
+        </div>
+        <div class="p-menu__section2">
+          <h2 class="p-menu__listTtl">MENU</h2>
+          <ul class="p-menu__list p-menu__categoryList">
+            <li><p>カテゴリ一覧</p></li>
+            <li><a href="">クロワッサン</a></li>
+            <li><a href="">ラスク</a></li>
+            <li><a href="">ギフト</a></li>
+          </ul>
+          <ul class="p-menu__list  p-menu__guideList">
+            <li><p>ご利用ガイド</p></li>
+            <li><a href="">注文方法</a></li>
+            <li><a href="">お支払方法</a></li>
+            <li><a href="">商品の発送について</a></li>
+          </ul>
+          <ul class="p-menu__list  p-menu__pickupList">
+            <li><p>PICK UP</p></li>
+            <li><a href="">月下美人カフェ</a></li>
+            <li><a href="">おいしい食べ方</a></li>
+            <li><a href="">月下美人のこだわり</a></li>
+          </ul>
+          <ul class="p-menu__list  p-menu__aboutList">
+            <li><p>月下美人について</p></li>
+            <li><a href="">店舗一覧</a></li>
+            <li><a href="">会社概要</a></li>
+            <li><a href="">よくあるご質問</a></li>
+          </ul>
+          <div class="p-menu__list c-btn p-menu__inquiryBtn u-bgcOrange">
+            <a href="">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </div><!--p-menu-->
+  </header><!--l-header-->
+  <header class="l-headerPc">
+    <div class="l-headerPc__box u-flex">
+      <p>天然酵母のクロワッサン 月下美人屋の通販サイト</p>
+      <a href=""><img src="assets/logo.jpg" class="l-headerPc__logo" alt="ロゴ"></a>
+      <ul class="l-headerPc__nav">
+        <li><a href="">会員登録</a></li>
+        <li><a href="">マイページ</a></li>
+        <li><a href=""><img src="assets/cart_white.png" alt="カート">カート</a></li>
+      </ul>
+    </div>
+    <ul class="l-headerPc__menuNav">
+      <li><a href="">商品一覧</a></li>
+      <li><a href="">ご利用ガイド</a></li>
+      <li><a href="">月下美人屋のこだわり</a></li>
+      <li><a href="">よくあるご質問</a></li>
+      <li><a href="">お問い合わせ</a></li>
+    </ul>
+  </header><!--l-headerPc-->
+  <main class="l-main">
+    <div class="p-slider">
+      <div class="p-slider__box">
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(1).jpg"></div>
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(2)s.jpg"></div>
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(3)r.jpg"></div>
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(4).jpg"></div>
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(5).jpg"></div>
+        <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(6).jpg"></div>
+      </div>
+    </div>
+    <div class="l-main__wrapper">
+      <div class="p-sidebar">
+        <div class="c-btn"><a href="">初めてのお客様へ</a></div>
+        <p class="p-sidebar__hello">こんにちはゲストさん</p>
+        <form class="p-sidebar__form p-sidebar__login">
+          <p>メールアドレス</p>
+          <input type="email" placeholder="sample@example.jp" class="c-submit">
+          <p>パスワード</p>
+          <input type="password" class="c-submit">
+          <input type="submit" class="c-btn  p-sidebar__loginBtn u-bgcOrange" value="ログイン">
+          <ul>
+            <li class="c-btn u-bgcGray"><a href="">会員登録する</a></li>
+            <li class="c-btn"><a href="">ログイン情報を忘れたら</a></li>
+          </ul>
+        </form>
+        <form class="p-sidebar__form p-sidebar__search">
+          <input placeholder="何かお探しですか？" class="c-submit">
+          <button type="submit" class="c-btn">検索する</button>
+        </form>
+        <nav class="p-sidebar__nav">
+          <ul class="p-sidebar__list">
+            <li><p>カテゴリ一覧</p></li>
+            <li><a href="">クロワッサン</a></li>
+            <li><a href="">ラスク</a></li>
+            <li><a href="">ギフト</a></li>
+          </ul>
+          <ul class="p-sidebar__list">
+            <li><p>ご利用ガイド</p></li>
+            <li><a href="">注文方法</a></li>
+            <li><a href="">お支払方法</a></li>
+            <li><a href="">商品の発送について</a></li>
+          </ul>
+          <ul class="p-sidebar__list">
+            <li><p>PICK UP</p></li>
+            <li><a href="">月下美人カフェ</a></li>
+            <li><a href="">おいしい食べ方</a></li>
+            <li><a href="">月下美人のこだわり</a></li>
+          </ul>
+          <ul class="p-sidebar__list">
+            <li><p>月下美人について</p></li>
+            <li><a href="">店舗一覧</a></li>
+            <li><a href="">会社概要</a></li>
+            <li><a href="">よくあるご質問</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="p-mainArea">
+        <section class="p-mainArea__news">
+          <p>お知らせ</p>
+          <ul class="p-mainArea__newsList">
+            <li><a href="">
+              2022.6.14 ビニール袋有料化について
+              <div class="u-arrow"></div>
+            </a></li>
+            <li><a href="">
+              2022.8.10 求人情報
+              <div class="u-arrow"></div>
+            </a></li>
+            <li><a href="">
+              ≪当店の衛生管理について≫
+              <div class="u-arrow"></div>
+            </a></li>
+            <li><a href="">
+              ≪商品のお届け日時について≫
+              <div class="u-arrow"></div>
+            </a></li>
+            <li><a href="">
+              2022.3.7 営業時間のご案内
+              <div class="u-arrow"></div>
+            </a></li>
+          </ul>
+        </section>
+        <section class="c-secBox p-grandMenu">
+          <div class="c-secBox__headline">
+            <h3>
+              おしながき
+              <br><small>Grand Menu</small>
+            </h3>
+          </div>
+          <ul class="p-grandMenu__list">
+            <li><a href="">
+              <p>
+                <small>croissant</small><br>クロワッサン
+              </p>
+            </a></li>
+            <li><a href="">
+              <p>
+                <small>ruskuro</small><br>ラスクロ
+              </p>
+            </a></li>
+            <li><a href="">
+              <p>
+                <small>pie croissant & rusk</small><br>パイクロワッサン
+                <br><span class="u-textCenter"><span class="u-upright">&</span><br>ラスク</span>
+              </p>
+            </a></li>
+            <li><a href="">
+              <p>
+                <small>gift</small><br>ギフト
+              </p>
+              </a></li>
+            <li><a href="">
+              <p>
+                <small>sandwich menu</small><br>サンドイッチ
+              </p>
+            </a></li>
+            <li><a href="">
+              <p>
+                <small>sandwich menu</small><br>サンドイッチ
+              </p>
+            </a></li>
+            <li><a href="">
+              <p>
+                <small>sandwich menu</small><br>サンドイッチ
+              </p>
+            </a></li>
+          </ul>
+        </section>
+        <section class="c-secBox p-features">
+          <div class="c-secBox__headline">
+            <h3>
+              特集一覧<br><small>Features</small>
+            </h3>
+          </div>
+          <ul class="p-features__list">
+            <li>
+              <a href=""><img src="assets/f_kodawari.jpg"></a>
+              <p>月下美人屋のこだわり
+                <br><span>素材や製法へのこだわりがぎゅっと詰まっています。</span></p>
+            </li>
+            <li>
+              <a href=""><img src="assets/f_tabekata.jpg"></a>
+              <p>おいしい食べ方
+                <br><span>ご家庭でも焼きたての美味しさで召し上がっていただけます。</span></p>
+            </li>
+            <li>
+              <a href=""><img src="assets/f-recruit.jpg"></a>
+              <p>求人案内
+                <br><span>販売や製造にご興味のある方、私たちと一緒に働きませんか？</span></p>
+            </li>
+          </ul>
+        </section>
+        <ul class="p-mainArea__boxList">
+          <li><a href=""><p>ご贈答箱・のしについて</p></a></li>
+          <li><a href=""><p>店舗一覧</p></a></li>
+          <li><a href=""><p>催事情報</p></a></li>
+          <li><a href=""><p>会社概要</p></a></li>
+        </ul>
+      </div>
+    </div><!--l-main__wrapper-->
+  </main><!--l-main-->
+  <footer class="l-footer">
+    <div  class="l-footer__box">
+      <div class="l-footer__address">
+        <h3>GEKKABIJIN</h3>
+        <img src="assets/gaikan.jpg" alt="店舗外観">
+        <p>1234 Apple Street, seattle, WA 98000 USA</p>
+      </div>
+      <div class="l-footer__inquiry">
+        <h3>問い合わせ</h3>
+        <div>■お電話でのお問い合わせ</div>
+        <a href="tel:00-000-0000" class="l-footer__inquiryNo">
+          <img src="assets/tell.png" alt="電話">00-000-0000</a>
+        <div>■FAXでのお問い合わせ</div>
+        <a href="" class="l-footer__inquiryNo"><img src="assets/fax.png" alt="ファックス">00-000-0000</a>
+        <div class="l-footer__btn">
+          <a href="">
+            メールでのお問い合わせはこちら
+            <div class="l-footer__arrowWhite"></div>
+          </a>
+        </div>
+        <p>
+          お問い合わせフォームは24時間受付中です。
+          <br>確認ができ次第、迅速にご対応させて頂きます。
+        </p>
+      </div>
+    </div>
+    <nav class="l-footer__nav">
+      <ul>
+        <li>
+          <a href="">
+            トップページ
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            よくあるご質問
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            会員登録
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            マイページ
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            特定商取引法表示
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            プライバシーポリシー
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            利用規約
+            <div class="u-arrow"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="l-footer__copyright">
+      <p>Copyright© gekkabijin. All rights reserved.</p>
+    </div>
+  </footer><!--l-footer-->
 </div><!--l-wrap-->
+<script src="main.js"></script>
 </body>
 </html>
