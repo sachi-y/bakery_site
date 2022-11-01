@@ -12,8 +12,8 @@
 <link href="css/reset.css"  rel="stylesheet">
 <link href="css/sp.css" rel="stylesheet">
 <link href="css/pc.css" rel="stylesheet">
-<link href="css/utility.css" rel="stylesheet">
-<link href="css/component.css" rel="stylesheet">
+<link href="css/util.css" rel="stylesheet">
+<link href="css/comp.css" rel="stylesheet">
 </head>
 <body>
 <div class="l-wrap">
@@ -27,7 +27,7 @@
         <span>メニュー</span>
       </div>
       <a href=""><img src="assets/logo.jpg" class="l-header__logo" alt="ロゴ"></a>
-      <a href=""><img src="assets/cart.png" class="l-header__cart" alt="カート"></a>
+      <a href="" class="l-header__cartLink"><img src="assets/cart.png" class="l-header__cart" alt="カート"><span class="l-header__cartText">カート</span></a>
     </div>
     <div class="p-menu">
       <div class="p-menu__exit">✖</div>
@@ -47,10 +47,16 @@
           </div>
           <p class="p-menu__hello">こんにちはゲストさん</p>
           <form class="p-menu__form p-menu__login">
-            <p>メールアドレス</p>
-            <input type="email" placeholder="sample@example.jp">
-            <p>パスワード</p>
-            <input type="password">
+            <div class="p-menu__flex">
+              <div class="p-menu__flexItem">
+                <p>メールアドレス</p>
+                <input class="p-menu__inputR" type="email" placeholder="sample@example.jp">
+              </div>
+              <div class="p-menu__flexItem">
+                <p>パスワード</p>
+                <input class="p-menu__inputR" type="password">
+              </div>
+            </div>
             <input type="submit" class="c-btn u-bgcOrange" value="ログイン">
             <ul>
               <li class="c-btn  u-bgcGray"><a href="">会員登録する</a></li>
@@ -119,7 +125,10 @@
         <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(5).jpg"></div>
         <div class="p-slider__item"><img class="p-slider__img" src="assets/kurowassan(6).jpg"></div>
       </div>
-    </div>
+      <div class="arrowsNav">
+        <div class="arrowsP"></div>
+        <div class="arrowsN"></div>
+      </div>
     <div class="l-main__wrapper">
       <div class="p-sidebar">
         <div class="c-btn"><a href="">初めてのお客様へ</a></div>
@@ -142,27 +151,27 @@
         <nav class="p-sidebar__nav">
           <ul class="p-sidebar__list">
             <li><p>カテゴリ一覧</p></li>
-            <li><a href="">クロワッサン</a></li>
-            <li><a href="">ラスク</a></li>
-            <li><a href="">ギフト</a></li>
+            <li><a href="">クロワッサン<div class="u-arrow"></div></a></li>
+            <li><a href="">ラスク<div class="u-arrow"></div></a></li>
+            <li><a href="">ギフト<div class="u-arrow"></div></a></li>
           </ul>
           <ul class="p-sidebar__list">
             <li><p>ご利用ガイド</p></li>
-            <li><a href="">注文方法</a></li>
-            <li><a href="">お支払方法</a></li>
-            <li><a href="">商品の発送について</a></li>
+            <li><a href="">注文方法<div class="u-arrow"></div></a></li>
+            <li><a href="">お支払方法<div class="u-arrow"></div></a></li>
+            <li><a href="">商品の発送について<div class="u-arrow"></div></a></li>
           </ul>
           <ul class="p-sidebar__list">
             <li><p>PICK UP</p></li>
-            <li><a href="">月下美人カフェ</a></li>
-            <li><a href="">おいしい食べ方</a></li>
-            <li><a href="">月下美人のこだわり</a></li>
+            <li><a href="">月下美人カフェ<div class="u-arrow"></div></a></li>
+            <li><a href="">おいしい食べ方<div class="u-arrow"></div></a></li>
+            <li><a href="">月下美人のこだわり<div class="u-arrow"></div></a></li>
           </ul>
           <ul class="p-sidebar__list">
             <li><p>月下美人について</p></li>
-            <li><a href="">店舗一覧</a></li>
-            <li><a href="">会社概要</a></li>
-            <li><a href="">よくあるご質問</a></li>
+            <li><a href="">店舗一覧<div class="u-arrow"></div></a></li>
+            <li><a href="">会社概要<div class="u-arrow"></div></a></li>
+            <li><a href="">よくあるご質問<div class="u-arrow"></div></a></li>
           </ul>
         </nav>
       </div>
@@ -300,43 +309,44 @@
     <nav class="l-footer__nav">
       <ul>
         <li>
-          <a href="">
-            トップページ
+          <a href="" class="l-footer__navLink">
+            トッ
+            プページ
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             よくあるご質問
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             会員登録
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             マイページ
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             特定商取引法表示
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             プライバシーポリシー
             <div class="u-arrow"></div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" class="l-footer__navLink">
             利用規約
             <div class="u-arrow"></div>
           </a>
@@ -345,6 +355,13 @@
     </nav>
     <div class="l-footer__copyright">
       <p>Copyright© gekkabijin. All rights reserved.</p>
+    </div>
+    <div class="u-pagetop">
+      <a href="">
+        ▲
+        <br>PAGE
+        <br>TOP
+      </a>
     </div>
   </footer><!--l-footer-->
 </div><!--l-wrap-->

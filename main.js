@@ -11,8 +11,38 @@ $(function(){
     autoplay:true,
     autoplaySpeed:2000,
     dots:true,
+    dotsClass:'slide-dots',
+    arrows:true,
+    prevArrow:'.arrowsP',
+    nextArrow:'.arrowsN',
     centerMode:true,
-    slidesToShow: 3,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          centerMode:true,
+          centerPadding: '0',
+          slidesToShow: 1,
+        },
+      },
+    ],
+  })
+});
+
+/*pagetop*/
+$(function(){
+  var pagetop = $('.u-pagetop');
+  pagetop.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+          pagetop.fadeIn();
+    } else {
+          pagetop.fadeOut();
+    }
+  });
+  pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
   });
 });

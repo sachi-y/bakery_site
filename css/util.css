@@ -1,0 +1,58 @@
+.u-flex {
+  display: flex;
+}
+
+.u-bgcOrange {
+  background-color: #E55A24 !important;
+}
+
+.u-bgcGray {
+  background-color: #888 !important;
+}
+
+.u-arrow {
+  display: inline-block;
+  margin: auto;
+  margin-right: 0;
+  border-top: solid 1.5px #000;
+  border-right: solid 1.5px #000;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+}
+
+.u-upright {
+  text-orientation: upright;
+}
+
+.u-textCenter {
+  display: block;
+  text-align: center;
+}
+
+.u-pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 997;
+}
+
+.u-pagetop a {
+  display: block;
+  width: 52px;
+  height: 52px;
+  padding-top: 4px;
+  text-decoration: none;
+  text-align: center;
+  background: #000;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 11px;
+  line-height: 14px;
+  font-family: sans-serif;
+  font-weight: 200;
+  transition: 0.5s;
+}
+.u-pagetop a:hover {
+  background-color: #888;
+}/*# sourceMappingURL=util.css.map */
