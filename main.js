@@ -3,6 +3,7 @@ $('.p-menuBtn').on('click', function(){
 });
 $('.p-menu__exit').on('click', function(){
   $('.p-menu').removeClass('is-active');
+
 });
 
 /*slick*/

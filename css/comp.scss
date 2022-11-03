@@ -17,11 +17,20 @@
       font-size: 12px;
     }
   }
-  .c-submit {
+.c-submit {
     padding: 10px;
     border: none;
     width: 100%;
     height: 40px;
     border: 1px solid #E1E1E1;
     border-radius: 5px;
+}
+
+@media screen and (max-width:600px) {
+  .c-btn {
+    height: 45px;
+    & a {
+      line-height: 45px;
+    }
   }
+}

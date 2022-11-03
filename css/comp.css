@@ -25,4 +25,13 @@
   height: 40px;
   border: 1px solid #E1E1E1;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .c-btn {
+    height: 45px;
+  }
+  .c-btn a {
+    line-height: 45px;
+  }
 }/*# sourceMappingURL=comp.css.map */

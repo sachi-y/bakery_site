@@ -256,7 +256,7 @@ button {
       z-index: 999;
     }
     &__wrap {
-      padding: 80px 10px 50px;
+      padding: 50px 10px 50px;
     }
     &__section {
       width: 90%;
@@ -287,7 +287,7 @@ button {
       & h2 {
         display: inline-block;
         position: relative;
-        font-size: 3vmin;
+        font-size: 22px;
         letter-spacing:3px;
         padding:0 20px;
         text-align: center;
@@ -316,13 +316,13 @@ button {
         padding: 10px;
         border: none;
         width: 100%;
-        height: 40px;
+        height: 45px;
       }
       & button {
         white-space: nowrap;
         border: none;
         width: 30%;
-        height: 40px;
+        height: 45px;
       }
     }
     &__flex {
@@ -357,21 +357,27 @@ button {
       list-style: none;
       margin-bottom: 50px;
       & li {
-        border-bottom: 1px dotted #000 ;
+        border-bottom: 1px dotted #a9a9a9 ;
         & a {
           display: block;
-          color: #000;
+          color: #444444;
           width: 100%;
-          line-height: 40px;
+          line-height: 30px;
           text-decoration: none;
           padding-left: 20px;
           font-size: 12px;
         }
         &:first-child {
-          border-bottom: 1px solid #000;
+          border-bottom: 1px solid #a9a9a9;
           & p {
-            margin: 20px auto;
+            margin: 18px auto;
+            color: #696969;
+            font-size: 15px;
+            font-weight: lighter;
           }
+        }
+        &:last-child {
+          border-bottom: none;
         }
       }
     }
@@ -404,6 +410,7 @@ button {
       line-height: 50px;
       list-style: none;
       & li {
+        position: relative;
         box-sizing: content-box;
         border-top: 1px solid #D0D0D0;
         border-bottom: 1px dotted #D0D0D0;
@@ -412,45 +419,27 @@ button {
         }
       }
       & a {
-        display: flex;
+        display: block;
         width: 100%;
         height: 100%;
         padding-left: 15px;
+        padding-right: 15px;
         font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         text-decoration: none;
         color: #000;
-        & div {
-          margin-right: 15px;
+          & div {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transform: rotate(45deg);
         }
       }
       & a:hover {
         background-color: 	#DCDCDC;
-      }
-    }
-  }
-  .c-secBox {
-    overflow: hidden;
-    &__headline {
-      width: 100%;
-      display: inline-block;
-      font-size: 22px;
-      font-family: serif;
-      font-weight: bold;
-      text-align: center;
-      margin: 15px auto;
-      & h3 {
-        width: 300px;
-        line-height: 33px;
-        letter-spacing: 0.05em;
-        display: inline-block;
-        text-align: center;
-      }
-      & small {
-        width: 100%;
-        display: inline-block;
-        border-top: 1px solid #000;
-        font-size: 11px;
-        letter-spacing: 0.3em;
       }
     }
   }
@@ -504,17 +493,17 @@ button {
           text-decoration: none;
           text-shadow: 1px 1px 2px #000;
           font-family: serif;
-          font-size: 30px;
+          font-size: 5vw;
           font-weight: bold;
           display: flex;
           align-items: center;
           color: #FFF;
           & p {
-            padding-top: 30px;
+            padding-top: 7vw;
           }
           & small {
-            padding-top: 5px;
-            font-size: 18px;
+            padding-top: 7wv;
+            font-size: 3vw;
             opacity: 0.8;
             font-weight: none;
           }
@@ -523,7 +512,7 @@ button {
     }
   }
   .l-footer {
-    padding-top: 50px;
+    padding-top: 20px;
     border-top: 2px solid #000;
     &__nav {
       & ul {
@@ -567,6 +556,13 @@ button {
   }
 }
 @media screen and (max-width:600px) {
+  .slide-dots li button::before {
+    height: 10px;
+    width: 10px;
+  }
+  button {
+    padding: 0 3px;
+  }
   .arrowsP{
     margin-right: 200px;
     width: 22px;
@@ -577,6 +573,9 @@ button {
     height: 22px;
   }
   .p-menu {
+    &__wrap {
+      padding: 10px 10px 50px;
+    }
     &__heading {
       margin: 30px auto;
       &::before {
@@ -591,6 +590,19 @@ button {
         background-color: #E1E1E1;
         z-index: 2;
       }
+    }
+    &__list {
+      & li {
+        & a {
+          line-height: 40px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    &__searchBtn {
+      margin-bottom: 20px;
     }
     &__section {
       width: 100%;
@@ -644,8 +656,41 @@ button {
         color: #FFF;
         text-align: center;
         font-family: serif;
-        font-size: 15px;
+        font-size: 4vw;
         }
+      }
+      &:first-child {
+        & a {
+            & p {
+                font-size: 3.5vw;
+            }
+        }
+    }
+    }
+  }
+  .c-secBox {
+    overflow: hidden;
+    &__headline {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      margin: 15px auto;
+      & h3 {
+        width: 300px;
+        line-height: 33px;
+        font-size: 22px;
+        font-family: serif;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        font-weight: 200;
+        text-align: center;
+      }
+      & small {
+        width: 100%;
+        display: inline-block;
+        border-top: 1px solid #000;
+        font-size: 15px;
+        letter-spacing: 0.3em;
       }
     }
   }
@@ -684,6 +729,31 @@ button {
             font-family: none;
           }
         }
+      }
+    }
+  }
+  .c-secBox {
+    &__headline {
+      width: 100%;
+      display: inline-block;
+      font-size: 22px;
+      font-family: serif;
+      font-weight: bold;
+      text-align: center;
+      margin: 15px auto;
+      & h3 {
+        width: 300px;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        text-align: center;
+      }
+      & small {
+        width: 100%;
+        display: inline-block;
+        border-top: 1px solid #000;
+        font-size: 12px;
+        letter-spacing: 0.3em;
       }
     }
   }
@@ -786,6 +856,11 @@ button {
       width: 10px;
       height: 10px;
       transform: rotate(45deg);
+    }
+    &__copyright {
+      letter-spacing: 0.3em;
+      line-height: 16px;
+      font-size: 8px;
     }
   }
 }

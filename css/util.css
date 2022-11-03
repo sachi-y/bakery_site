@@ -55,4 +55,14 @@
 }
 .u-pagetop a:hover {
   background-color: #888;
+}
+
+.u-kaigyo {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .u-kaigyo {
+    display: block;
+  }
 }/*# sourceMappingURL=util.css.map */

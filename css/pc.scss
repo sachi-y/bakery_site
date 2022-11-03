@@ -101,6 +101,9 @@
         }
         }
     }
+    .arrowsP{
+        margin-right: 300px;
+    }
     .l-main {
         width: 100%;
         margin-top: 160px;
@@ -136,14 +139,14 @@
         list-style: none;
         margin-bottom: 40px;
         & li {
-            border-bottom: 1px dotted #000 ;
+            border-bottom: 1px dotted #a9a9a9;
             &:hover {
             background-color: #D0D0D0;
             }
             & a {
             display: flex;
             padding-right: 10px;
-            color: #000;
+            color: #444444;
             width: 100%;
             line-height: 40px;
             text-decoration: none;
@@ -151,11 +154,14 @@
             font-size: 12px;
             }
             &:first-child {
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #444444;
             & p {
+                color: #444;
                 padding-left: 5px;
-                margin-bottom: 15px;
-                font-weight: bold;
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.2em;
             }
             }
         }
@@ -182,12 +188,17 @@
         list-style: none;
         & li {
             border-bottom: 1px solid #D0D0D0;
+            position: relative;
         }
         & a {
-            display: flex;
+            display: block;
             width: 100%;
             height: 100%;
             padding-left: 20px;
+            padding-right: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: 14px;
             text-decoration: none;
             color: #000;
@@ -198,42 +209,12 @@
         & a:hover {
             background-color: #D0D0D0;
         }
-        }
-    }
-    .c-secBox {
-        overflow: hidden;
-        &__headline {
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        font-size: 25px;
-        font-family: serif;
-        font-weight: bold;
-        text-align: center;
-        margin: 30px auto;
-        &::before {
-            width: 70%;
-            height: 1.8px;
+        & div {
             position: absolute;
+            right: 5px;
             top: 50%;
-            left: 50%;
-            transform: translateY(-50%) translateX(-50%);
-            content: "";
-            display: block;
-            z-index: 1;
-            background-color: #444444;
-        }
-        & h3 {
-            display: inline-block;
-            position: relative;
-            text-align: center;
-            padding: 0 30px;
-            z-index: 2;
-            background-color: #FFF;
-        }
-        & small {
-            font-size: 13.5px;
-            letter-spacing: 0.3em;
+            transform: translateY(-50%);
+            transform: rotate(45deg);
         }
         }
     }
@@ -304,6 +285,22 @@
         }
         }
     }
+    .p-mainArea__boxList {
+        & li {
+            & a {
+                & p {
+                    font-size: 15px !important;
+                }
+            }
+            &:first-child {
+                & a {
+                    & p {
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+    }
     .l-footer {
         margin-top: 70px;
         width: 100%;
@@ -366,9 +363,14 @@
         display: flex;
         justify-content: space-between;
         & li {
+        position: relative;
         list-style: none;
         width: 22%;
-        height: 50px;
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 30%;
+        }
         &:hover {
             opacity: 0.5;
         }
@@ -385,16 +387,30 @@
             background-color: #999999;
         }
         & a {
-            display: block;
-            line-height: 50px;
-            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            color: #FFF;
-            text-align: center;
-            font-family: serif;
-            font-size: 3vim;
+            & p {
+                line-height: 100%;
+                color: #FFF;
+                font-family: serif;
+                font-size: 1.8vw;
+            }
         }
+        &:first-child {
+            & a {
+                & p {
+                    font-size: 1.7vw;
+                }
+            }
         }
+    }
     }
     .p-features {
         &__list {
@@ -433,7 +449,46 @@
         }
         }
     }
+    .c-secBox {
+        overflow: hidden;
+        &__headline {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        font-size: 23px;
+        text-align: center;
+        margin: 60px auto;
+        &::before {
+            width: 70%;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            content: "";
+            display: block;
+            z-index: 1;
+            background-color: #444444;
+        }
+        & h3 {
+            display: inline-block;
+            position: relative;
+            font-family: serif;
+            font-weight: 200;
+            text-align: center;
+            padding: 0 30px;
+            z-index: 2;
+            background-color: #FFF;
+            letter-spacing: 0.1em;
+        }
+        & small {
+            font-size: 13.5px;
+            letter-spacing: 0.3em;
+        }
+        }
+    }
     .l-footer {
+        padding-top: 20px;
         margin-top: 70px;
         width: 100%;
         border-top: 1px solid #000;
@@ -451,9 +506,10 @@
             display: block;
             width: 100%;
             padding: 15px 0;
-            text-align: center;
+            text-align: justify;
             font-weight: bold;
-            letter-spacing: 0.95em;
+            letter-spacing: 0.75em;
+            font-size: min(3vw,28px);
         }
         & img {
             width: 100%;
@@ -498,7 +554,7 @@
         color: #000;
         text-decoration: none;
         font-weight: bold;
-        font-size: 35px;
+        font-size: min(4vw,35px);
         & img {
             width: 40px;
             padding-right: 10px;
