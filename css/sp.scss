@@ -117,8 +117,9 @@ button {
       width: 100%;
     }
     &__item {
-      height: 50vw;
-      width: fit-content;
+      height: 51vw;
+      width: 100vw;
+      object-fit: cover;
     }
     &__img {
       height: 100%;

@@ -136,10 +136,10 @@ button {
     width: 100%;
   }
   .p-slider__item {
-    height: 50vw;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    height: 51vw;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .p-slider__img {
     height: 100%;
