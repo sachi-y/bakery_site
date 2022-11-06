@@ -359,6 +359,7 @@ button {
     border-radius: 5px;
   }
   .p-menu__search {
+    height: 45px;
     overflow: hidden;
     border-radius: 5px;
   }
